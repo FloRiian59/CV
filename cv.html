@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — Florian LEMAIRE · Développeur Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="dark">
+    <!-- LOADER -->
+    <div class="loader-screen" id="loader">
+      <div class="loader-content">
+        <div class="loader-lines">
+          <div class="ll" data-i="1">
+            <span class="lk">const</span> <span class="lv">cv</span>
+            <span class="lo">=</span> <span class="lb">{</span>
+          </div>
+          <div class="ll" data-i="2">
+            &nbsp;&nbsp;<span class="lp">candidat</span
+            ><span class="lo">:</span> <span class="ls">"Florian LEMAIRE"</span
+            ><span class="lc">,</span>
+          </div>
+          <div class="ll" data-i="3">
+            &nbsp;&nbsp;<span class="lp">status</span><span class="lo">:</span>
+            <span class="lg">true</span>
+          </div>
+          <div class="ll" data-i="4">
+            <span class="lb">}</span><span class="lc">;</span>
+          </div>
+        </div>
+        <div class="loader-spinner-wrap">
+          <div class="loader-spinner"></div>
+        </div>
+        <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+        <div class="loader-pct" id="loaderPct">0%</div>
+      </div>
+    </div>
+
+    <!-- BACKGROUND décoratif -->
+    <div class="bg-deco" aria-hidden="true">
+      <div class="grid-bg"></div>
+      <div id="particles"></div>
+    </div>
+
+    <!-- Toggle thème -->
+    <button class="theme-btn" id="themeBtn" title="Changer le thème">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="cv-wrap" id="cvWrap">
+      <aside class="col-left">
+        <!-- Photo -->
+        <div class="portrait-wrap">
+          <div class="portrait-glow"></div>
+          <div class="portrait-ring">
+            <div class="portrait-inner">
+              <i class="fas fa-user-astronaut"></i>
+            </div>
+          </div>
+          <div class="portrait-status">
+            <i class="fas fa-circle pulse-dot"></i> Disponible
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="left-block">
+          <div class="left-block-title">
+            <span class="lbt-bracket">&lt;</span>Contact<span
+              class="lbt-bracket"
+              >/&gt;</span
+            >
+          </div>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i
+              ><a href="mailto:2vsk22@gmail.com">2vsk22@gmail.com</a>
+            </li>
+            <li><i class="fas fa-phone"></i><span>06 45 67 26 42</span></li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i><span>Lille, France</span>
+            </li>
+            <li><i class="fas fa-birthday-cake"></i><span>16/10/2000</span></li>
+            <li>
+              <i class="fas fa-globe"></i
+              ><a
+                href="https://florian-lemaire-portfolio.vercel.app"
+                target="_blank"
+                >florian-lemaire-portfolio.vercel.app</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Compétences -->
+        <div class="left-block">
+          <div class="left-block-title">
+            <span class="lbt-bracket">&lt;</span>Compétences<span
+              class="lbt-bracket"
+              >/&gt;</span
+            >
+          </div>
+
+          <p class="skill-group-label">Développement</p>
+          <div class="skill-item" data-pct="100">
+            <div class="sk-row">
+              <span>HTML / CSS</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+          <div class="skill-item" data-pct="80">
+            <div class="sk-row">
+              <span>JavaScript</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+          <div class="skill-item" data-pct="80">
+            <div class="sk-row">
+              <span>React.js</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+          <div class="skill-item" data-pct="60">
+            <div class="sk-row">
+              <span>Backend</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+
+          <p class="skill-group-label">Outils & Design</p>
+          <div class="skill-item" data-pct="100">
+            <div class="sk-row">
+              <span>VS Code</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+          <div class="skill-item" data-pct="80">
+            <div class="sk-row">
+              <span>GitHub</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+          <div class="skill-item" data-pct="80">
+            <div class="sk-row">
+              <span>Photoshop</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+
+          <p class="skill-group-label">Savoir-être</p>
+          <div class="skill-item" data-pct="90">
+            <div class="sk-row">
+              <span>Relation client</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+          <div class="skill-item" data-pct="85">
+            <div class="sk-row">
+              <span>Travail en équipe</span><span class="sk-pct">0%</span>
+            </div>
+            <div class="sk-bar"><div class="sk-fill"></div></div>
+          </div>
+        </div>
+
+        <!-- Langues -->
+        <div class="left-block">
+          <div class="left-block-title">
+            <span class="lbt-bracket">&lt;</span>Langues<span
+              class="lbt-bracket"
+              >/&gt;</span
+            >
+          </div>
+          <div class="lang-item">
+            <span class="lang-flag">🇫🇷</span>
+            <div class="lang-info">
+              <span class="lang-name">Français</span>
+              <span class="lang-lvl native">Langue maternelle</span>
+            </div>
+            <div class="lang-dots">
+              <span class="ld on"></span><span class="ld on"></span
+              ><span class="ld on"></span><span class="ld on"></span
+              ><span class="ld on"></span>
+            </div>
+          </div>
+          <div class="lang-item">
+            <span class="lang-flag">🇬🇧</span>
+            <div class="lang-info">
+              <span class="lang-name">Anglais</span>
+              <span class="lang-lvl pro">Compétence professionnelle</span>
+            </div>
+            <div class="lang-dots">
+              <span class="ld on"></span><span class="ld on"></span
+              ><span class="ld on"></span><span class="ld on"></span
+              ><span class="ld"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intérêts -->
+        <div class="left-block">
+          <div class="left-block-title">
+            <span class="lbt-bracket">&lt;</span>Intérêts<span
+              class="lbt-bracket"
+              >/&gt;</span
+            >
+          </div>
+          <div class="interests">
+            <span class="chip"><i class="fas fa-music"></i> Musique</span>
+            <span class="chip"><i class="fas fa-gamepad"></i> Jeux Vidéo</span>
+            <span class="chip"><i class="fas fa-film"></i> Cinéma</span>
+            <span class="chip"><i class="fas fa-code"></i> Dev Web</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="col-right">
+        <!-- ── HEADER ── -->
+        <header class="cv-header">
+          <div class="header-noise"></div>
+          <div class="header-content">
+            <div class="header-top-tag">
+              <span class="code-comment"
+                >// Développeur Web · En reconversion · Lille</span
+              >
+            </div>
+            <h1 class="header-name">
+              <span class="hn-pre">const</span>
+              <span class="hn-first"> Florian</span>
+              <span class="hn-last">LEMAIRE</span>
+              <span class="hn-semi">;</span>
+            </h1>
+            <div class="header-subtitle">
+              <span class="hs-slash">//</span>
+              <span class="hs-role" id="rotatingRole">Développeur Web</span>
+              <span class="hs-cursor">|</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- ── BODY DROITE ── -->
+        <div class="cv-body">
+          <!-- À PROPOS -->
+          <section class="cv-section">
+            <h2 class="sec-title">
+              <span class="stn">00</span>
+              <span class="stb">&lt;</span><span class="stt">À Propos</span
+              ><span class="stb">/&gt;</span>
+              <span class="stl"></span>
+            </h2>
+            <p class="about-p">
+              Après plusieurs années dans le secteur commercial — où j'ai
+              développé un vrai sens du contact client, de la rigueur et de
+              l'adaptabilité — j'ai choisi de me reconvertir dans le
+              développement web, une passion qui me suit depuis longtemps.
+            </p>
+            <p class="about-p">
+              Formé chez OpenClassrooms, je maîtrise les fondamentaux du web
+              moderne : HTML, CSS, JavaScript, React et Node.js. À l'aise avec
+              les outils de versioning (GitHub) et de design (Photoshop), je
+              suis à la recherche d'une première opportunité pour mettre mes
+              compétences en pratique et continuer à apprendre en équipe.
+            </p>
+          </section>
+
+          <!-- EXPÉRIENCES -->
+          <section class="cv-section">
+            <h2 class="sec-title">
+              <span class="stn">01</span>
+              <span class="stb">&lt;</span><span class="stt">Expériences</span
+              ><span class="stb">/&gt;</span>
+              <span class="stl"></span>
+            </h2>
+
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                  <div class="tl-head">
+                    <span class="tl-period"
+                      ><i class="fas fa-calendar-alt"></i> 2019</span
+                    >
+                    <span class="tl-badge">Commerce</span>
+                  </div>
+                  <h3 class="tl-role">Vendeur Conseil</h3>
+                  <div class="tl-company">
+                    <i class="fas fa-building"></i> Bricorama · 21 Ter de
+                    Turenne, 59000 Lille
+                  </div>
+                  <p class="tl-desc">
+                    Conseil et accompagnement des clients dans leurs projets de
+                    bricolage et d'aménagement. Gestion des rayons, suivi des
+                    stocks et contribution à l'atteinte des objectifs de vente.
+                  </p>
+                  <ul class="tl-list">
+                    <li>
+                      Accueil et conseil personnalisé d'une clientèle variée
+                      (particuliers et professionnels)
+                    </li>
+                    <li>
+                      Gestion et réassort des rayons — rigueur et sens de
+                      l'organisation
+                    </li>
+                    <li>
+                      Atteinte régulière des objectifs individuels de vente
+                    </li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">Conseil client</span
+                    ><span class="tag">Gestion de rayon</span
+                    ><span class="tag">Objectifs commerciaux</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                  <div class="tl-head">
+                    <span class="tl-period"
+                      ><i class="fas fa-calendar-alt"></i> 2018</span
+                    >
+                    <span class="tl-badge alt">Commerce</span>
+                  </div>
+                  <h3 class="tl-role">Vendeur / Conseiller Décoration</h3>
+                  <div class="tl-company">
+                    <i class="fas fa-building"></i> Fly · 9650 Villeneuve-d'Ascq
+                  </div>
+                  <p class="tl-desc">
+                    Vente de mobilier et articles de décoration intérieure.
+                    Accompagnement des clients dans la mise en scène de leur
+                    espace, de la prise de besoin jusqu'au passage en caisse.
+                  </p>
+                  <ul class="tl-list">
+                    <li>
+                      Conseil en aménagement intérieur et sens de l'esthétique —
+                      compétence transférable au design UI
+                    </li>
+                    <li>
+                      Gestion des retours, réclamations et suivi SAV avec
+                      diplomatie
+                    </li>
+                    <li>
+                      Collaboration quotidienne avec l'équipe pour atteindre les
+                      objectifs collectifs
+                    </li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">Vente</span
+                    ><span class="tag">Sens du détail</span
+                    ><span class="tag">SAV</span
+                    ><span class="tag">Travail en équipe</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                  <div class="tl-head">
+                    <span class="tl-period"
+                      ><i class="fas fa-calendar-alt"></i> 2017</span
+                    >
+                    <span class="tl-badge alt2">Commerce</span>
+                  </div>
+                  <h3 class="tl-role">Vendeur Prêt-à-Porter</h3>
+                  <div class="tl-company">
+                    <i class="fas fa-building"></i> C&A · 90 rue du Commerce,
+                    59113 Seclin
+                  </div>
+                  <p class="tl-desc">
+                    Vente de vêtements et accessoires en grande surface
+                    spécialisée. Gestion des cabines d'essayage, mise en rayon
+                    et entretien de l'espace de vente.
+                  </p>
+                  <ul class="tl-list">
+                    <li>
+                      Accueil d'un fort volume de clients — gestion de la
+                      pression et du rythme
+                    </li>
+                    <li>
+                      Mise en valeur des produits et respect des chartes
+                      visuelles merchandising
+                    </li>
+                    <li>Encaissement et gestion de la caisse en autonomie</li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">Volume client</span
+                    ><span class="tag">Merchandising</span
+                    ><span class="tag">Autonomie</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                  <div class="tl-head">
+                    <span class="tl-period"
+                      ><i class="fas fa-calendar-alt"></i> 2016</span
+                    >
+                    <span class="tl-badge alt2">Commerce</span>
+                  </div>
+                  <h3 class="tl-role">Employé Libre-Service</h3>
+                  <div class="tl-company">
+                    <i class="fas fa-building"></i> Bio C'bon · 36 rue
+                    Faidherbe, 59000 Lille
+                  </div>
+                  <p class="tl-desc">
+                    Mise en rayon de produits biologiques et naturels, accueil
+                    et conseil des clients sur les produits et leurs bénéfices.
+                    Participation à la gestion des stocks et des commandes.
+                  </p>
+                  <ul class="tl-list">
+                    <li>
+                      Développement d'une appétence pour le conseil et la
+                      relation humaine
+                    </li>
+                    <li>
+                      Apprentissage de la gestion des stocks et du réassort
+                    </li>
+                    <li>
+                      Sensibilisation aux enjeux de qualité et de traçabilité
+                      produits
+                    </li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">Relation client</span
+                    ><span class="tag">Gestion des stocks</span
+                    ><span class="tag">Conseil produit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- FORMATIONS -->
+          <section class="cv-section">
+            <h2 class="sec-title">
+              <span class="stn">02</span>
+              <span class="stb">&lt;</span
+              ><span class="stt">Études &amp; Formations</span
+              ><span class="stb">/&gt;</span>
+              <span class="stl"></span>
+            </h2>
+
+            <div class="edu-list">
+              <div class="edu-item">
+                <div class="edu-year-col">
+                  <span class="edu-year">2024</span>
+                  <div class="edu-year-line"></div>
+                </div>
+                <div class="edu-card">
+                  <div class="edu-icon cert">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <div class="edu-detail">
+                    <h3 class="edu-title">Développeur Web</h3>
+                    <div class="edu-school">
+                      <i class="fas fa-graduation-cap"></i> OpenClassrooms ·
+                      Formation en ligne
+                    </div>
+                    <p class="edu-desc">
+                      Formation complète au développement web : HTML, CSS,
+                      JavaScript, React, Node.js. Projets concrets avec suivi de
+                      mentor et validation par jury professionnel.
+                    </p>
+                    <div class="tags">
+                      <span class="tag">HTML/CSS</span
+                      ><span class="tag">JavaScript</span
+                      ><span class="tag">React</span
+                      ><span class="tag">Node.js</span
+                      ><span class="tag">GitHub</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-year-col">
+                  <span class="edu-year">2018</span>
+                  <div class="edu-year-line"></div>
+                </div>
+                <div class="edu-card">
+                  <div class="edu-icon"><i class="fas fa-store"></i></div>
+                  <div class="edu-detail">
+                    <h3 class="edu-title">BAC Pro Commerce</h3>
+                    <div class="edu-school">
+                      <i class="fas fa-university"></i> Lycée Pro Sonia Delaunay
+                      · Lomme
+                    </div>
+                    <p class="edu-desc">
+                      Techniques de vente, gestion commerciale, relation client
+                      et merchandising. Formation en alternance avec expériences
+                      pratiques en entreprise.
+                    </p>
+                    <div class="tags">
+                      <span class="tag">Vente</span
+                      ><span class="tag">Gestion commerciale</span
+                      ><span class="tag">Relation client</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-year-col">
+                  <span class="edu-year">2017</span>
+                  <div class="edu-year-line"></div>
+                </div>
+                <div class="edu-card">
+                  <div class="edu-icon"><i class="fas fa-tag"></i></div>
+                  <div class="edu-detail">
+                    <h3 class="edu-title">BEP Commerce</h3>
+                    <div class="edu-school">
+                      <i class="fas fa-university"></i> Lycée Pro Sonia Delaunay
+                      · Lomme
+                    </div>
+                    <p class="edu-desc">
+                      Bases de la vente et de la gestion commerciale. Découverte
+                      des métiers du commerce et des techniques de relation
+                      client.
+                    </p>
+                    <div class="tags">
+                      <span class="tag">Commerce</span
+                      ><span class="tag">Vente</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-year-col">
+                  <span class="edu-year">2015</span>
+                  <div class="edu-year-line"></div>
+                </div>
+                <div class="edu-card">
+                  <div class="edu-icon"><i class="fas fa-school"></i></div>
+                  <div class="edu-detail">
+                    <h3 class="edu-title">Brevet des Collèges</h3>
+                    <div class="edu-school">
+                      <i class="fas fa-university"></i> Collège Boris Vian ·
+                      Lille
+                    </div>
+                    <p class="edu-desc">
+                      Diplôme national du brevet, premier diplôme officiel de
+                      l'éducation nationale.
+                    </p>
+                    <div class="tags"><span class="tag">DNB</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
